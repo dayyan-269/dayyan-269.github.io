@@ -2,7 +2,7 @@ name: Github Page
 
 on:
   push:
-    branches: [gh-page]
+    branches: [master]
 
 jobs:
   build:
