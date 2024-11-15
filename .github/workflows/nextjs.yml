@@ -14,8 +14,8 @@ jobs:
       - name: Install Packages
         uses: actions/setup-node@v4
         with:
-          version: 20
-          run: npm i
+          node_version: 20
+        run: npm i
       - name: Set Environment Variables
         env:
           BASE_PATH: /dayyan-269.github.io
