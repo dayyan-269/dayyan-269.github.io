@@ -8,11 +8,18 @@ async function getSkills() {
   const skills = [
     { name: "HTML5", icon: "html5", iconType: "logo" },
     { name: "CSS3", icon: "css3", iconType: "logo" },
-    { name: "JS", icon: "javascript", iconType: "logo" },
+    { name: "Javascript/ES6", icon: "javascript", iconType: "logo" },
+    { name: "Typescript", icon: "typescript", iconType: "logo" },
     { name: "PHP", icon: "php", iconType: "logo" },
     { name: "Git", icon: "git", iconType: "logo" },
     { name: "React", icon: "react", iconType: "logo" },
+    { name: "Node.js", icon: "nodejs", iconType: "logo" },
+    { name: "React Native", icon: "react", iconType: "logo" },
     { name: "MySQL", icon: "data", iconType: "solid" },
+    { name: "Firebase", icon: "firebase", iconType: "logo" },
+    { name: "Bootstrap", icon: "bootstrap", iconType: "logo" },
+    { name: "Tailwind CSS", icon: "tailwind-css", iconType: "logo" },
+    { name: "Google Cloud Provider", icon: "google-cloud", iconType: "logo" },
   ];
   return skills;
 }
@@ -43,7 +50,7 @@ async function Home() {
   const projects = await getProjects();
 
   return (
-    <main className="w-10/12 mx-auto lg:w-9/12">
+    <main className='w-10/12 mx-auto lg:w-9/12'>
       {/* Identity Section */}
       <section className='flex flex-col gap-y-1 py-3 text-white'>
         Hello, I&rsquo;m
@@ -102,7 +109,7 @@ async function Home() {
         <Field compName='fullname' placeholder='Fullname' isRequired={true} />
         <Field compName='email' placeholder='Email' isRequired={true} />
         <Textarea compName='message' placeholder='Your Message' />
-        <PrimaryButton compType="submit">Submit</PrimaryButton>
+        <PrimaryButton compType='submit'>Submit</PrimaryButton>
       </section>
     </main>
   );
