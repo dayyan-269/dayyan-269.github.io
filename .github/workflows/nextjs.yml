@@ -11,11 +11,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Packages
-        uses: npm/action-setup@v2
+      - name: Set node version
+        uses: actions/setup-node@v4
         with:
-          version: 8
-          run_install: true
+          node_version: 20
+      - name: Install package
+        run: npm i
       - name: Set Environment Variables
         env:
           BASE_PATH: /dayyan-269.github.io
@@ -29,4 +30,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: gh-page
           folder: out
